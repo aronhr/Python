@@ -5,7 +5,7 @@ def numInList(list1, list2):
     for x in xrange(0, len(list1)):
         for a in xrange(0, len(list1)):
             if list2[x] == list1[a]:
-                num = num +1
+                num = num + 1
 
 def numInPlace(list1, list2):
     num = 0
@@ -21,7 +21,7 @@ win = False
 while win == False:
 
     for x in xrange(1, 6):
-        userList.append(input("Select num " + str(x) + " "))
+        userList.append(raw_input("Select number " + str(x) + " "))
 
     if numInPlace(computerList, userList) == 5:
         print "You Win!"
