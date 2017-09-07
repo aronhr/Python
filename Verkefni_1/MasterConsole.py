@@ -23,7 +23,7 @@ userList = []   # List to save user inputs
 
 while True:
     for x in range(1, 6):
-        userList.append(input("Select number " + str(x) + " "))
+        userList.append(int(input("Select number " + str(x) + " ")))
 
     if numInPlace(computerList, userList) == 5:
         print("You Win!")
