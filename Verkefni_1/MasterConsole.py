@@ -8,7 +8,6 @@ def numInList(computerList, userList):
             num = num + 1
     return num
 
-
 # Checks if numbers are in correct place.
 def numInPlace(computerList, userList):
     num = 0
@@ -30,6 +29,5 @@ while True:
         break
 
     print(str(numInList(computerList, userList)) + " Numbers are correct but in wrong place")
-
     print(str(numInPlace(computerList, userList)) + " Numbers are in correct place")
     break
