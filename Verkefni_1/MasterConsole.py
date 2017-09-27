@@ -8,7 +8,6 @@ def numInList(computerList, userList):
             num = num + 1
     return num
 
-
 # Checks if numbers are in correct place.
 def numInPlace(computerList, userList):
     num = 0
@@ -23,13 +22,12 @@ userList = []   # List to save user inputs
 
 while True:
     for x in range(1, 6):
-        userList.append(input("Select number " + str(x) + " "))
+        userList.append(int(input("Select number " + str(x) + " ")))
 
     if numInPlace(computerList, userList) == 5:
         print("You Win!")
         break
 
     print(str(numInList(computerList, userList)) + " Numbers are correct but in wrong place")
-
     print(str(numInPlace(computerList, userList)) + " Numbers are in correct place")
     break
