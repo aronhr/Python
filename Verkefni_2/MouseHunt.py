@@ -6,7 +6,7 @@ pygame.init()
 font = pygame.font.SysFont('Arial', 15)
 
 width = 400
-height = 200
+height = 150
 white = (255, 255, 255)
 red = (255, 0, 0)
 blue = (0, 0, 255)
@@ -42,9 +42,9 @@ while running:
     screen.fill(white)
     event = pygame.event.poll()
 
-    screen.blit(font.render('red = cat. So dont click them', True, (0, 0, 0)), (10, 80))
-    screen.blit(font.render('blue = mouse. So click that fucker', True, (0, 0, 0,)), (10, 95))
-    screen.blit(font.render('purple = Shouldnt be happening. Dont know about that one', True, (0, 0, 0)), (10, 110))
+    screen.blit(font.render('Click on the blue boxes', True, (0, 0, 0)), (10, 80))
+    screen.blit(font.render('Red = cat. Don\'t click them', True, (0, 0, 0,)), (10, 95))
+    screen.blit(font.render('Blue = mouse.', True, (0, 0, 0)), (10, 110))
 
     if event.type == pygame.QUIT:
         print('Mice hit = ' + str(miceHit))
@@ -60,7 +60,6 @@ while running:
                     miceHit = miceHit + 1
                 else:
                     nullHit = nullHit + 1
-                    # Stilla hvad notatdinn smellir a
 
     rect_colors = list()
 
@@ -74,6 +73,6 @@ while running:
             rect_colors.append('Blue')
         else:
             rect_colors.append('None')
-    time.sleep(0.5)
+    time.sleep(0.2)  # Wait time after one round
 
     pygame.display.update()
