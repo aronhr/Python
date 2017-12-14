@@ -1,5 +1,6 @@
 from random import randint  # Get Random
 
+
 # Checks if numbers match the generated numbers from computer.
 def numInList(computerList, userList):
     num = 0
@@ -7,6 +8,7 @@ def numInList(computerList, userList):
         if computerList[a] in userList:
             num = num + 1
     return num
+
 
 # Checks if numbers are in correct place.
 def numInPlace(computerList, userList):
