@@ -47,12 +47,12 @@ while running:
 
     if event.type == pygame.MOUSEBUTTONDOWN and event.button == LEFT_BUTTON:
         for x in xrange(0, len(dice_list)):
-            if dice_list[x].collidepoint(event.pos, event.pos):
+            if dice_list[x].collidepoint(event.pos):
                 rethrow.append(x)
-        if rethrow_bt.collidepoint(event.pos, event.pos):
+        if rethrow_bt.collidepoint(event.pos):
             if rethrowCount < 2:
                 for x in xrange(0, len(rethrow)):
-                    dice_list[rethrow[x]] = random.randint(1, 6)
+                    dice_list[rethrow[x]] = randint.random(1, 6)
                 rethrowCount = rethrowCount + 1
 
     screen.fill(white)
